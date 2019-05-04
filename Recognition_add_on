@@ -1,0 +1,9 @@
+import speech_recognition as sr
+
+r=sr.Recognizer()
+#წყაროდ განვიხილავთ wav აუდიოფაილს: 
+harvad=sr.AudioFile('example.wav')
+with harvad as source:
+    audio=r.record(source)
+val=r.recognize_google(audio)
+print(val,end='\n')
